@@ -1,0 +1,14 @@
+$background-color: #F6F6F6;
+$primary-color: #FF6060;
+$secondary-color: #FFF;
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
