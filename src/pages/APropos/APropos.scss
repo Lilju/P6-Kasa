@@ -1,0 +1,43 @@
+.about_container{
+    max-width: 1500px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+    justify-content: flex-start;
+}
+
+.about_collapse {
+    max-width: 1023px;
+    width:80%;
+    margin:0 auto;
+}
+
+.banner {
+    height:225px;
+    background-image: url('../../assets/images/montagne.jpg');
+    background-size:cover;
+    background-position:center;
+    border-radius: 25px;
+    margin:0px 50px;
+}
+
+.title_collapse_apropos{
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:1.3rem;
+    font-weight: 500;
+}
+
+@media (max-width:767px) {
+    .banner{
+        margin:0 20px;
+    } 
+    .title_collapse_apropos{
+        font-size:1.5rem;
+    }
+    .collapses_container{
+       width:auto;
+       margin:20px;
+    }
+} 

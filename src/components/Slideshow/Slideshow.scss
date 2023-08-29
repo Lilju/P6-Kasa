@@ -1,0 +1,65 @@
+@import '../../main.scss';
+
+.slideshow {
+    position: relative;
+    max-width: 1340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 415px;
+    margin: 42px auto;
+    @media (max-width: 768px) {
+        margin: 20px auto;
+        height: 200px;        
+    }
+    &_image {
+        position: absolute;
+        min-width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        border-radius: 25px;
+        @media (max-width: 768px) {
+            border-radius: 10px;
+        }
+    }
+    &_arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @media (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+        }
+        &_back {
+            left: 0;
+            @media (max-width: 768px) {
+                left: -15px;
+            }
+        }
+        &_forward {
+            right: 0;
+            @media (max-width: 768px) {
+                right: -15px;
+            }
+        }
+    }
+}
+
+.imageCounter {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    color: $secondary-color;
+    font-size: 1.3rem;
+}

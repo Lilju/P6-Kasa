@@ -6,9 +6,9 @@ function Card({id, title, cover}) {
         <Link to={`/logements/${id}`} className="card">
             <div>
                 <img src={cover} alt={title} />
-                <div>
-                    <h2>{title}</h2>
-                </div>
+                <div className="overlay">                
+                <h2>{title}</h2> 
+                </div>               
             </div>
         </Link>
     );

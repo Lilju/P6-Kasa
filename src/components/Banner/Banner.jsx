@@ -1,13 +1,10 @@
-import home_banner from '../../assets/images/home_banner.png';
 import './Banner.scss';
 
-function Banner() {
+function Banner({imgSrc, title, about}) {
     return (
         <div className="banner">
-        <img src={home_banner} alt="côte bretonne" />
-        <div>
-            <h1>Chez vous, partout et ailleurs</h1>
-        </div>
+        <img src={imgSrc} alt={title} className={`${about ? "about" : ""}`} /> 
+            {typeof(title) !== "undefined" && <h1>{title}</h1>}       
         </div>
     );
     }
