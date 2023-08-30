@@ -70,6 +70,7 @@
     &_host {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         gap: 10px;
         &_picture {
             width: 64px;
@@ -100,6 +101,7 @@
             margin-bottom: 10px;
             flex-direction: row-reverse;
             justify-content: space-between;
+            align-items: center;
         }
         .host_rating {
             margin-right: 10px;
