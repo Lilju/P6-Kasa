@@ -9,7 +9,7 @@
     height: 415px;
     margin: 42px auto;
     @media (max-width: 768px) {
-        margin: 20px auto;
+        margin: 20px;
         height: 200px;        
     }
     &_image {
@@ -36,20 +36,20 @@
         align-items: center;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        @media (max-width: 768px) {
-            width: 30px;
-            height: 30px;
-        }
         &_back {
             left: 0;
             @media (max-width: 768px) {
                 left: -15px;
+                width: 30px;
+                height: 30px;
             }
         }
         &_forward {
             right: 0;
             @media (max-width: 768px) {
                 right: -15px;
+                width: 30px;
+                height: 30px;
             }
         }
     }
@@ -62,4 +62,7 @@
     transform: translateX(-50%);
     color: $secondary-color;
     font-size: 1.3rem;
+    @media (max-width: 768px) {
+        display: none;
+    }
 }

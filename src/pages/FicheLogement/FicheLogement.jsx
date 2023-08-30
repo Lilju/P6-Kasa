@@ -19,6 +19,7 @@ export default function FicheLogement() {
     const tags = logement.tags;
     const equipements = logement.equipments;
     const ratingNumber = logement.rating;
+    const name = logement.host.name.split(' ');
     const hostPicture = logement.host.picture;
 
     return (
@@ -40,7 +41,8 @@ export default function FicheLogement() {
                     </div>
                     <div className="host_rating_container">
                         <div className="details_logement_host">
-                            <p className="details_logement_host_name">{logement.host.name}</p>
+                            <p className="details_logement_host_name"><span>{name[0]}</span>
+								<span>{name[1]}</span></p>
                             <img className="details_logement_host_picture" src={hostPicture} alt={logement.host.name} />
                         </div>
                         <div className="details_logement_rating">
@@ -54,7 +56,10 @@ export default function FicheLogement() {
                 </article>
                 <article className="description_logement">
                     <Collapse title="Description" description={logement.description} />
-                    <Collapse title="Équipements" description={equipements} />
+                    <Collapse title="Équipements" description={equipements.map((equipement) => (
+                        <p key={`${logement.id}-${equipement}`}>{equipement}</p>
+                    ))}
+                     />
                 </article>
             </div>
         </main>
