@@ -10,9 +10,11 @@ $secondary-color: #FFF;
   }
 
 body {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

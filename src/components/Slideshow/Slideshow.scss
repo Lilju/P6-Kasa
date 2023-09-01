@@ -8,9 +8,12 @@
     align-items: center;
     height: 415px;
     margin: 42px auto;
+    overflow: hidden;
+    border-radius: 25px;
     @media (max-width: 768px) {
         margin: 20px;
-        height: 200px;        
+        height: 200px;
+        border-radius: 10px;        
     }
     &_image {
         position: absolute;

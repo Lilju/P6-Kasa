@@ -15,7 +15,7 @@ function Collapse({title, description}) {
                 {title}
                 <img src = {arrow_open} alt="open or close collapse" className={isOpen ?`arrow_opened`:`arrow_closed`}/>     
             </div>
-            {isOpen && <div className="collapse_description">
+            {isOpen && <div className={isOpen ? `collapse_description open_description`:`collapse_description close_description`}>
                 {description}
                 </div>}
         </div>
