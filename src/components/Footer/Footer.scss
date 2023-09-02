@@ -9,8 +9,7 @@
     height: 209px;
     margin-top: 40px;
     @media (max-width: 768px) {
-        position: fixed;
-        bottom: 0;
+        margin-top: 60px;
     }
     p {
         font-size: 1.5rem;
